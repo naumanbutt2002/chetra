@@ -1,0 +1,59 @@
+name: chetra
+description: A new Flutter project.
+publish_to: "none"
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+  http: ^1.3.0
+  firebase_core: ^3.12.1
+  firebase_auth: ^5.5.1
+  cloud_firestore: any
+  firebase_messaging: any
+  firebase_analytics: any
+  provider: ^6.0.5
+  get: ^4.7.2
+  flutter_staggered_grid_view: ^0.7.0
+  minio: ^3.5.7
+  image_picker: ^1.1.2
+  path_provider: ^2.1.5
+  async:
+  video_player:
+  flutter_dotenv:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.14.3
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    # chat_rooms.png
+    # - assets/chetraicon.png
+    # - assets/chetra_ikon.png
+    # - assets/friend_list.png
+    # - assets/friend_requests.png
+    # - assets/invitation_mode.png
+    # - assets/profile.png
+    # - assets/recommended_contacts.png
+    # - assets/search_ikon.png
+    # - assets/settings_ikon.png
+    # - assets/notifications.png
+    # - assets/language.png
+    # - assets/blocked_users.png
+    # - assets/settings.png
+    # - assets/logout.png
+    - .env
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/chetraicon.png"
+  adaptive_icon_foreground: "assets/chetraicon.png"
+  adaptive_icon_background: "#ffffff"

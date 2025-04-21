@@ -1,0 +1,44 @@
+plugins {
+    id "com.android.application"
+    // START: FlutterFire Configuration
+    id 'com.google.gms.google-services'
+    // END: FlutterFire Configuration
+    id "kotlin-android"
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin" // Firebase için eklendi
+}
+
+android {
+    namespace = "com.example.chetra"
+    compileSdk = 35  // Eğer hata alırsan en güncel sürümü kullan
+
+    ndkVersion = "27.0.12077973" // Firebase hata mesajına göre güncellendi
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_18
+        targetCompatibility = JavaVersion.VERSION_18
+    }
+
+    kotlinOptions {
+        jvmTarget = "18"
+    }
+
+    defaultConfig {
+        applicationId = "com.example.chetra"
+        minSdk = 24  // Flutter'ın minimum desteklediği SDK sürümü
+        targetSdk = 34  // Güncel sürüm
+        versionCode = 1
+        versionName = "1.0"
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.getByName("debug")
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
